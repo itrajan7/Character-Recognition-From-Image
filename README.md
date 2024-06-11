@@ -17,18 +17,22 @@ Feedback Loop (Optional): Implement a feedback loop mechanism where the system l
 
 This process combines techniques from computer vision, NLP, and information retrieval to convert textual descriptions of characters in images into actionable data. Depending on the specific requirements and constraints of the application, the approach and techniques used may vary.
 
-Step 1: Building the Classifier: Training a CNN to recognize digits (0-9) and uppercase letters (A-Z) is a solid foundation. CNNs are commonly used for image classification tasks and should work well for recognizing individual characters.
+# Step 1: 
+Building the Classifier: Training a CNN to recognize digits (0-9) and uppercase letters (A-Z) is a solid foundation. CNNs are commonly used for image classification tasks and should work well for recognizing individual characters.
 
-Step 2: Character Segmentation: This step is crucial for accurately identifying individual characters within a handwritten word. Make sure the segmentation algorithm can handle variations in handwriting styles and spacing between characters effectively.
+# Step 2: 
+Character Segmentation: This step is crucial for accurately identifying individual characters within a handwritten word. Make sure the segmentation algorithm can handle variations in handwriting styles and spacing between characters effectively.
 
-Step 3: Classification of Segmented Characters: Once characters are segmented, passing them through the trained CNN classifier should yield the recognition results. Ensure that the classifier is robust and can generalize well to different handwriting styles.
+# Step 3: 
+Classification of Segmented Characters: Once characters are segmented, passing them through the trained CNN classifier should yield the recognition results. Ensure that the classifier is robust and can generalize well to different handwriting styles.
 
-Recognition and Post-Processing:
+# Recognition and Post-Processing:
 
 Sorting contours to get the correct order of individual characters is a smart approach, especially for handwritten text where characters may not be perfectly aligned.
 The "get letters" function to fetch the list of letters and the "get word" function to reconstruct the word from the recognized letters seem appropriate for assembling the final output.
 Left-to-right sorting for extracting a single word is logical and aligns with the typical reading direction.
-Conclusion:
+
+# Conclusion:
 
 It's good to acknowledge the limitations of the model due to training on a slightly smaller dataset. Training on a larger and more diverse dataset can certainly improve the model's performance.
 Your suggestion for handling complete paragraphs (line segmentation >> word segmentation >> character segmentation >> classification >> post-processing) is a systematic approach that can scale to larger text recognition tasks.
